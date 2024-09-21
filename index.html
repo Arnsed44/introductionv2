@@ -3,89 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>defaultmmm's about me<3</title>
+    <title>My Introduction <3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #89fffd, #ef32d9);
-            color: #fff;
+            background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+            color: #333;
             text-align: center;
-            transition: background 0.5s;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 40px;
-            transition: transform 0.5s;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         header h1 {
             margin: 0;
-            font-size: 3em;
-            animation: fadeIn 1s ease-in-out;
+            font-size: 2.5em;
         }
         section {
-            padding: 50px 0;
-            transition: transform 0.5s;
-        }
-        #gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            background-color: #111;
-            padding: 50px;
+            padding: 40px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-        }
-        .image-card {
-            width: 300px;
-            margin: 20px;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
-        .image-card:hover {
-            transform: scale(1.05);
+        section:hover {
+            transform: translateY(-5px);
         }
-        .image-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-        }
-        .link {
-            display: block;
-            margin: 20px auto;
-            padding: 15px 30px;
+        .link, .riddle-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
             background-color: #ff5e57;
             color: #fff;
             text-decoration: none;
-            border-radius: 10px;
+            border-radius: 5px;
             transition: background 0.3s, transform 0.3s;
-            font-size: 1.2em;
-            width: 200px;
         }
-        .link:hover {
+        .link:hover, .riddle-button:hover {
             background-color: #ff3d3d;
             transform: scale(1.05);
         }
-        footer {
-            background-color: rgba(0, 0, 0, 0.9);
-            color: #ddd;
-            padding: 30px;
+        .answer {
+            display: none;
+            margin-top: 10px;
+            color: #ffeb3b;
+            font-weight: bold;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 20px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            section {
+                padding: 20px;
+            }
+            .link, .riddle-button {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
         }
     </style>
+    <script>
+        function toggleAnswer(answerId) {
+            const answerElement = document.getElementById(answerId);
+            answerElement.style.display = answerElement.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Welcome to defaultmmm's Awesome World</h1>
+        <h1>My Introduction <3</h1>
     </header>
     <section id="about">
-        <h2>About Me</h2>
+        <h2>Welcome!</h2>
         <p>Hi, I'm defaultmmm, or you can call me "default." I'm active on Discord, Roblox, and I love coding!</p>
         <p>Feel free to add me on Discord: <strong>defaultmmm</strong> or on Roblox: <strong>wes_12212</strong>.</p>
     </section>
@@ -93,8 +93,32 @@
         <h2>Personal Details</h2>
         <p><strong>Age:</strong> Teenager</p>
         <p><strong>Grade:</strong> 8th</p>
-        <h3>Hobbies</h3>
-        <p>I enjoy gaming, sleeping, playing around, goofing off, and exploring new things!</p>
+        <p><strong>Interests:</strong> I enjoy school to a certain extent, gaming, sleeping, playing around, goofing off, and exploring new things!</p>
+    </section>
+    <section id="favorites">
+        <h2>Favorite Games</h2>
+        <ul>
+            <li>Roblox</li>
+            <li>Minecraft</li>
+            <li>Fortnite</li>
+            <li>Among Us</li>
+        </ul>
+    </section>
+    <section id="quotes">
+        <h2>Favorite Quotes</h2>
+        <p>"Gaming is not just a hobby; it's a lifestyle."</p>
+        <p>"Don't dream it, be it!"</p>
+    </section>
+    <section id="riddles">
+        <h2>Fun Riddles</h2>
+        <p>What has keys but can't open locks? 
+            <button class="riddle-button" onclick="toggleAnswer('answer1')">Show Answer</button>
+            <span id="answer1" class="answer">A piano.</span>
+        </p>
+        <p>I'm tall when I'm young, and I'm short when I'm old. What am I? 
+            <button class="riddle-button" onclick="toggleAnswer('answer2')">Show Answer</button>
+            <span id="answer2" class="answer">A candle.</span>
+        </p>
     </section>
     <section id="links">
         <h2>Links</h2>
@@ -103,28 +127,16 @@
     <section id="gallery">
         <h2>My Favorite Cats and Dogs</h2>
         <div class="image-card">
-            <img src="https://placedog.net/500/400" alt="Cute Dog 1">
+            <img src="https://images.unsplash.com/photo-1555685812-6b0d64f4b792" alt="Cute Dog 1" style="width: 100%; border-radius: 15px;">
         </div>
         <div class="image-card">
-            <img src="https://placedog.net/501/400" alt="Cute Dog 2">
+            <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783" alt="Cute Dog 2" style="width: 100%; border-radius: 15px;">
         </div>
         <div class="image-card">
-            <img src="https://placekitten.com/400/300" alt="Cute Cat 1">
+            <img src="https://images.unsplash.com/photo-1584011878123-03e019c1c857" alt="Cute Cat 1" style="width: 100%; border-radius: 15px;">
         </div>
         <div class="image-card">
-            <img src="https://placekitten.com/401/300" alt="Cute Cat 2">
-        </div>
-        <div class="image-card">
-            <img src="https://placedog.net/502/400" alt="Cute Dog 3">
-        </div>
-        <div class="image-card">
-            <img src="https://placedog.net/503/400" alt="Cute Dog 4">
-        </div>
-        <div class="image-card">
-            <img src="https://placekitten.com/402/300" alt="Cute Cat 3">
-        </div>
-        <div class="image-card">
-            <img src="https://placekitten.com/403/300" alt="Cute Cat 4">
+            <img src="https://images.unsplash.com/photo-1563881670872-4491185a686c" alt="Cute Cat 2" style="width: 100%; border-radius: 15px;">
         </div>
     </section>
     <footer>
