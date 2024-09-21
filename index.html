@@ -3,49 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Introduction <3</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <title>My Introduction <3</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Introduction!</h1>
-        <p>Your one-stop page to learn about me.</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#details">Details</a></li>
-            <li><a href="#riddles">Riddles</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="about" class="fade-in">
-            <h2>About Me</h2>
-            <p>Hi, I'm defaultmmm! I'm active on Discord, Roblox, and I love coding!</p>
-            <img src="https://placekitten.com/200/300" alt="Cute Cat" class="responsive">
+    <div class="navbar">
+        <button onclick="showSection('about')">About Me</button>
+        <button onclick="showSection('details')">Details</button>
+        <button onclick="showSection('riddles')">Riddles</button>
+        <button onclick="showSection('quotes')">Quotes & Facts</button>
+        <a href="https://YouTube.com/@BamTrixYT" target="_blank" class="youtube-button">YouTube Channel</a>
+    </div>
+    
+    <div id="content">
+        <section id="about" class="section active">
+            <h1>About Me</h1>
+            <p>Hi, I'm defaultmmm! I enjoy gaming, sleeping, playing around, goofing off, and school to a certain extent.</p>
+            <img src="https://placekitten.com/300/200" alt="Cat">
+            <img src="https://placedog.net/300/200" alt="Dog">
         </section>
-        <section id="details" class="fade-in">
-            <h2>Personal Details</h2>
-            <p><strong>Age:</strong> Teenager</p>
-            <p><strong>Grade:</strong> 8th</p>
-            <p><strong>Interests:</strong> I enjoy school to a certain extent, gaming, and goofing off!</p>
-            <img src="https://placedog.net/200/300" alt="Cute Dog" class="responsive">
+
+        <section id="details" class="section">
+            <h1>Personal Details</h1>
+            <p>Age: Teenager</p>
+            <p>Grade: 8th</p>
+            <p>Interests: I enjoy school to a certain extent, gaming, and goofing off!</p>
         </section>
-        <section id="riddles" class="fade-in">
-            <h2>Fun Riddles</h2>
-            <p>What has keys but can't open locks? 
-                <button onclick="toggleAnswer('answer1')" class="riddle-button">Show Answer</button>
-                <span id="answer1" class="answer">A piano.</span>
-            </p>
-            <p>What has a heart that doesn’t beat? 
-                <button onclick="toggleAnswer('answer2')" class="riddle-button">Show Answer</button>
-                <span id="answer2" class="answer">An artichoke.</span>
-            </p>
+
+        <section id="riddles" class="section">
+            <h1>Funny Riddles</h1>
+            <p>What has keys but can't open locks? <button onclick="toggleAnswer('answer1')">Show Answer</button></p>
+            <p id="answer1" class="answer">A piano!</p>
+            <p>What has a heart that doesn’t beat? <button onclick="toggleAnswer('answer2')">Show Answer</button></p>
+            <p id="answer2" class="answer">An artichoke!</p>
         </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 defaultmmm. Connect with me!</p>
-    </footer>
+
+        <section id="quotes" class="section">
+            <h1>Quotes & Facts</h1>
+            <blockquote>"The only limit to our realization of tomorrow will be our doubts of today." - Franklin D. Roosevelt</blockquote>
+            <blockquote>"Life is 10% what happens to us and 90% how we react to it." - Charles R. Swindoll</blockquote>
+            <p>Fun Fact: Did you know that honey never spoils? Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3000 years old and still edible!</p>
+        </section>
+    </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
