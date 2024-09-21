@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.css">
     <title>My Introduction <3</title>
 </head>
 <body>
@@ -15,23 +16,25 @@
         <button onclick="showSection('quotes')">Quotes & Facts</button>
         <a href="https://YouTube.com/@BamTrixYT" target="_blank" class="youtube-button">YouTube Channel</a>
     </div>
-    
+
     <div id="content">
-        <section id="about" class="section active">
+        <section id="about" class="section active" data-aos="fade-up">
             <h1>About Me</h1>
             <p>Hi, I'm defaultmmm! I enjoy gaming, sleeping, playing around, goofing off, and school to a certain extent.</p>
-            <img src="https://placekitten.com/300/200" alt="Cat">
-            <img src="https://placedog.net/300/200" alt="Dog">
+            <div class="image-container">
+                <img src="https://placekitten.com/400/300" alt="Cute Cat">
+                <img src="https://placedog.net/400/300" alt="Cute Dog">
+            </div>
         </section>
 
-        <section id="details" class="section">
+        <section id="details" class="section" data-aos="fade-up">
             <h1>Personal Details</h1>
             <p>Age: Teenager</p>
             <p>Grade: 8th</p>
             <p>Interests: I enjoy school to a certain extent, gaming, and goofing off!</p>
         </section>
 
-        <section id="riddles" class="section">
+        <section id="riddles" class="section" data-aos="fade-up">
             <h1>Funny Riddles</h1>
             <p>What has keys but can't open locks? <button onclick="toggleAnswer('answer1')">Show Answer</button></p>
             <p id="answer1" class="answer">A piano!</p>
@@ -39,7 +42,7 @@
             <p id="answer2" class="answer">An artichoke!</p>
         </section>
 
-        <section id="quotes" class="section">
+        <section id="quotes" class="section" data-aos="fade-up">
             <h1>Quotes & Facts</h1>
             <blockquote>"The only limit to our realization of tomorrow will be our doubts of today." - Franklin D. Roosevelt</blockquote>
             <blockquote>"Life is 10% what happens to us and 90% how we react to it." - Charles R. Swindoll</blockquote>
@@ -47,6 +50,14 @@
         </section>
     </div>
 
+    <div class="footer">
+        <p>Created with love by defaultmmm. Check out my projects!</p>
+    </div>
+
     <script src="scripts.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
