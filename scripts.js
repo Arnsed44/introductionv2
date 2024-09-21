@@ -1,13 +1,14 @@
-function toggleAnswer(answerId) {
-    const answerElement = document.getElementById(answerId);
-    answerElement.style.display = answerElement.style.display === "none" ? "inline" : "none";
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
+
+    const activeSection = document.getElementById(sectionId);
+    activeSection.classList.add('active');
 }
 
-window.onload = function() {
-    const sections = document.querySelectorAll('section');
-    sections.forEach((section, index) => {
-        setTimeout(() => {
-            section.style.opacity = 1;
-        }, index * 500); // Delay for each section
-    });
-};
+function toggleAnswer(answerId) {
+    const answerElement = document.getElementById(answerId);
+    answerElement.classList.toggle('show');
+}
