@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>defaultmmm's Cool Website</title>
+    <title>defaultmmm's Awesome Website</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,24 +12,30 @@
             background: linear-gradient(135deg, #89fffd, #ef32d9);
             color: #fff;
             text-align: center;
+            transition: background 0.5s;
         }
         header {
             background-color: rgba(0, 0, 0, 0.8);
             padding: 40px;
+            transition: transform 0.5s;
         }
         header h1 {
             margin: 0;
             font-size: 3em;
+            animation: fadeIn 1s ease-in-out;
         }
         section {
             padding: 50px 0;
+            transition: transform 0.5s;
         }
         #gallery {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             flex-wrap: wrap;
             background-color: #111;
             padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
         }
         .image-card {
             width: 300px;
@@ -37,27 +43,57 @@
             overflow: hidden;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s;
+        }
+        .image-card:hover {
+            transform: scale(1.05);
         }
         .image-card img {
             width: 100%;
             height: auto;
+        }
+        .button {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 30px;
+            background-color: #ff5e57;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s, transform 0.3s;
+            font-size: 1.2em;
+        }
+        .button:hover {
+            background-color: #ff3d3d;
+            transform: scale(1.05);
         }
         footer {
             background-color: rgba(0, 0, 0, 0.9);
             color: #ddd;
             padding: 30px;
         }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to defaultmmm's World</h1>
+        <h1>Welcome to defaultmmm's Awesome World</h1>
     </header>
     <section id="about">
         <h2>About Me</h2>
         <p>Hi, I'm defaultmmm, or you can call me "default." I'm active on Discord, Roblox, and I love coding!</p>
+        <p>Feel free to add me on Discord: <strong>defaultmmm</strong> or on Roblox: <strong>wes_12212</strong>.</p>
+    </section>
+    <section id="buttons">
+        <h2>Links</h2>
+        <a class="button" href="https://youtube.com/@BamTrixYT" target="_blank">YT Channel</a>
+        <!-- Add more buttons here as needed -->
     </section>
     <section id="gallery">
+        <h2>My Favorite Cats and Dogs</h2>
         <div class="image-card">
             <img src="https://placekitten.com/400/300" alt="Cute Cat 1">
         </div>
@@ -70,10 +106,21 @@
         <div class="image-card">
             <img src="https://placedog.net/501/400" alt="Cute Dog 2">
         </div>
+        <div class="image-card">
+            <img src="https://placekitten.com/402/300" alt="Cute Cat 3">
+        </div>
+        <div class="image-card">
+            <img src="https://placedog.net/502/400" alt="Cute Dog 3">
+        </div>
+        <div class="image-card">
+            <img src="https://placekitten.com/403/300" alt="Cute Cat 4">
+        </div>
+        <div class="image-card">
+            <img src="https://placedog.net/503/400" alt="Cute Dog 4">
+        </div>
     </section>
     <footer>
         <p>&copy; 2024 defaultmmm. Connect with me on Discord and Roblox!</p>
     </footer>
 </body>
 </html>
-
