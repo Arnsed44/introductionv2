@@ -4,60 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.css">
-    <title>My Introduction <3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>My Introduction</title>
 </head>
 <body>
-    <div class="navbar">
-        <button onclick="showSection('about')">About Me</button>
-        <button onclick="showSection('details')">Details</button>
-        <button onclick="showSection('riddles')">Riddles</button>
-        <button onclick="showSection('quotes')">Quotes & Facts</button>
-        <a href="https://YouTube.com/@BamTrixYT" target="_blank" class="youtube-button">YouTube Channel</a>
-    </div>
+    <div class="container">
+        <header>
+            <h1>Welcome to My World</h1>
+        </header>
 
-    <div id="content">
-        <section id="about" class="section active" data-aos="fade-up">
-            <h1>About Me</h1>
-            <p>Hi, I'm defaultmmm! I enjoy gaming, sleeping, playing around, goofing off, and school to a certain extent.</p>
-            <div class="image-container">
-                <img src="https://placekitten.com/400/300" alt="Cute Cat">
-                <img src="https://placedog.net/400/300" alt="Cute Dog">
+        <section class="image-gallery">
+            <h2>Explore Cool Stuff!</h2>
+            <div class="gallery">
+                <div class="image-item">
+                    <img src="https://placekitten.com/400/300" alt="Cute Cat">
+                    <p>A cute cat enjoying the sunshine.</p>
+                </div>
+                <div class="image-item">
+                    <img src="https://place-dog.com/400/300" alt="Playful Dog">
+                    <p>A playful dog ready to fetch.</p>
+                </div>
+                <div class="image-item">
+                    <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/car-249798_1280.jpg" alt="Sporty Car">
+                    <p>A sporty car zooming down the road.</p>
+                </div>
+                <div class="image-item">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/29/06/22/hong-kong-1869704_1280.jpg" alt="Beautiful City">
+                    <p>A beautiful city skyline at dusk.</p>
+                </div>
+                <div class="image-item">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/29/06/22/famous-1869703_1280.jpg" alt="Famous Landmark">
+                    <p>A famous landmark, showcasing its beauty.</p>
+                </div>
             </div>
+            <button id="continue-btn">Continue</button>
         </section>
 
-        <section id="details" class="section" data-aos="fade-up">
-            <h1>Personal Details</h1>
-            <p>Age: Teenager</p>
-            <p>Grade: 8th</p>
-            <p>Interests: I enjoy school to a certain extent, gaming, and goofing off!</p>
+        <section class="intro-section hidden">
+            <h2>Welcome!</h2>
+            <p>Get ready to learn more about me!</p>
+            <button id="about-btn">All About Me</button>
         </section>
 
-        <section id="riddles" class="section" data-aos="fade-up">
-            <h1>Funny Riddles</h1>
-            <p>What has keys but can't open locks? <button onclick="toggleAnswer('answer1')">Show Answer</button></p>
-            <p id="answer1" class="answer">A piano!</p>
-            <p>What has a heart that doesn’t beat? <button onclick="toggleAnswer('answer2')">Show Answer</button></p>
-            <p id="answer2" class="answer">An artichoke!</p>
+        <section class="all-about-me hidden">
+            <h2>All About Me</h2>
+            <p><strong>Grade:</strong> 8th</p>
+            <p><strong>Age:</strong> Teen</p>
+            <h3>Likes</h3>
+            <ul>
+                <li>Gaming</li>
+                <li>Sleeping</li>
+                <li>Social Time</li>
+                <li>Anime (e.g., Naruto, Dragon Ball Z, Bleach, Death Note)</li>
+                <li>Binge-watching shows like Hazbin Hotel</li>
+            </ul>
+            <h3>Dislikes</h3>
+            <ul>
+                <li>Some Fruits</li>
+                <li>Vegetables</li>
+                <li>Hypocrites</li>
+            </ul>
+            <h3>Friends</h3>
+            <ul>
+                <li>Picture Frame</li>
+                <li>Yoko</li>
+                <li>JC</li>
+                <li>Vivian</li>
+                <li>Hornet</li>
+                <li>Lucas Chen</li>
+            </ul>
         </section>
 
-        <section id="quotes" class="section" data-aos="fade-up">
-            <h1>Quotes & Facts</h1>
-            <blockquote>"The only limit to our realization of tomorrow will be our doubts of today." - Franklin D. Roosevelt</blockquote>
-            <blockquote>"Life is 10% what happens to us and 90% how we react to it." - Charles R. Swindoll</blockquote>
-            <p>Fun Fact: Did you know that honey never spoils? Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3000 years old and still edible!</p>
-        </section>
-    </div>
-
-    <div class="footer">
-        <p>Created with love by defaultmmm. Check out my projects!</p>
+        <footer>
+            <p>Thanks for visiting my page!</p>
+        </footer>
     </div>
 
     <script src="scripts.js"></script>
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
 </html>
